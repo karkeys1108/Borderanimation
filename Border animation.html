@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(48, 46, 46) ;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+            box-shadow: 16px 14px 20px #0000008c;
+            border-radius:10px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        div::before{
+            content: "";
+            background-image:conic-gradient(#ff0000 20deg,
+            transparent 120deg
+            );
+            width: 150%;
+            height: 150%;
+            position:absolute;
+            animation: rotate 2s linear infinite;
+        }
+        div::after{
+            content: "Animation";
+            width: 290px;
+            height:290px;
+            background: #101010;
+            position: absolute;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ff0052;
+            font-size: 30px;
+            letter-spacing: 5px;
+            box-shadow: inset 20px 20px 20px #0000008c;
+
+        }
+        @keyframes rotate{
+            0%{
+            transform :rotate(0deg)        
+           }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>
